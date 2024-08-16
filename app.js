@@ -62,7 +62,7 @@ const io = new Server(server, {
 // });
 
 const db = mysql.createConnection({
-  host: 'dpg-cqvglpdds78s739j4fn0-a',
+  host: 'mysql-2368b285-tarunbirla2018-e2d8.b.aivencloud.com',
   user: 'avnadmin',
   password: 'AVNS_TFeDdKhxtYJU9BIZdqg',
   database: 'defaultdb',
