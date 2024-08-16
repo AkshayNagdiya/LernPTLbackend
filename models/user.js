@@ -1,16 +1,15 @@
-const { Pool } = require("pg"); // Correctly import the PostgreSQL client
-const bluebird = require('bluebird');
+const mysql = require("mysql2");
+const bluebird = require("bluebird");
 
-// Create a connection pool for PostgreSQL
-const pool = new Pool({
-    host: 'dpg-cqvglpdds78s739j4fn0-a',
-    user: 'lernptldatabase_user',
-    password: 'ImIHdRRdqLn0VdboUDjUYYDAayjKkBtt',
-    database: 'lernptldatabase',
-    port: 5432, // Default port for PostgreSQL
-    max: 10, // Connection limit
-    idleTimeoutMillis: 30000, // Close idle clients after 30 seconds
-    connectionTimeoutMillis: 2000, // Return an error after 2 seconds if connection could not be established
+const pool = mysql.createPool({
+  host: "mysql-2368b285-tarunbirla2018-e2d8.b.aivencloud.com",
+  user: "avnadmin",
+  password: "AVNS_TFeDdKhxtYJU9BIZdqg",
+  database: "defaultdb",
+    port : 14789,
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
 });
 
 pool.query = bluebird.promisify(pool.query);
