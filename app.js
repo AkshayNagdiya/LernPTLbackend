@@ -1,5 +1,6 @@
 const express = require("express");
 //const { db } = require("pg");
+const mysql = require("mysql2");
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
