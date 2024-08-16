@@ -1,5 +1,5 @@
 const express = require("express");
-const mysql = require("mysql2");
+const { Client } = require("pg");
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
@@ -43,9 +43,9 @@ const io = new Server(server, {
   }
 });
 
+const { Client } = require("pg");
 
-
-const db = mysql.createConnection({
+const db = new Client({
   host: 'dpg-cqvglpdds78s739j4fn0-a',
   user: 'lernptldatabase_user',
   password: 'ImIHdRRdqLn0VdboUDjUYYDAayjKkBtt',
@@ -53,14 +53,30 @@ const db = mysql.createConnection({
   port : 5432,
 });
 
-
-db.connect((err) => {
+client.connect((err) => {
   if (err) {
-    console.error('Error connecting to MySQL:', err);
+    console.error('Error connecting to PostgreSQL:', err);
   } else {
-    console.log('Connected to MySQL database');
+    console.log('Connected to PostgreSQL database');
   }
 });
+
+// const db = mysql.createConnection({
+//   host: 'dpg-cqvglpdds78s739j4fn0-a',
+//   user: 'lernptldatabase_user',
+//   password: 'ImIHdRRdqLn0VdboUDjUYYDAayjKkBtt',
+//   database: 'lernptldatabase',
+//   port : 5432,
+// });
+
+
+// db.connect((err) => {
+//   if (err) {
+//     console.error('Error connecting to MySQL:', err);
+//   } else {
+//     console.log('Connected to MySQL database');
+//   }
+// });
 
 
 let users=[];
