@@ -49,7 +49,8 @@ const db = mysql.createConnection({
   host: 'dpg-cqvglpdds78s739j4fn0-a',
   user: 'lernptldatabase_user',
   password: 'ImIHdRRdqLn0VdboUDjUYYDAayjKkBtt',
-  database: 'lernptldatabase'
+  database: 'lernptldatabase',
+  port : 5432,
 });
 
 
