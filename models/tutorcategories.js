@@ -2,10 +2,10 @@ const mysql = require("mysql2");
 const bluebird = require('bluebird');
 
 const pool = mysql.createPool({
-    host: 'localhost',
-    user: 'cmsfylqm_storyfypro',
-    password: 'cmsfylqm_storyfypro',
-    database: 'cmsfylqm_storyfypro',
+    host: 'dpg-cqvglpdds78s739j4fn0-a',
+    user: 'lernptldatabase_user',
+    password: 'ImIHdRRdqLn0VdboUDjUYYDAayjKkBtt',
+    database: 'lernptldatabase',
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0

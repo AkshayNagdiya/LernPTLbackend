@@ -46,10 +46,10 @@ const io = new Server(server, {
 
 
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'cmsfylqm_storyfypro',
-  password: 'cmsfylqm_storyfypro',
-  database: 'cmsfylqm_storyfypro'
+  host: 'dpg-cqvglpdds78s739j4fn0-a',
+  user: 'lernptldatabase_user',
+  password: 'ImIHdRRdqLn0VdboUDjUYYDAayjKkBtt',
+  database: 'lernptldatabase'
 });
 
 
