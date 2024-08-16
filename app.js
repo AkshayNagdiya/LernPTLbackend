@@ -1,5 +1,5 @@
 const express = require("express");
-const { Client } = require("pg");
+const { db } = require("pg");
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
@@ -52,7 +52,7 @@ const db = new Client({
   port : 5432,
 });
 
-client.connect((err) => {
+db.connect((err) => {
   if (err) {
     console.error('Error connecting to PostgreSQL:', err);
   } else {
