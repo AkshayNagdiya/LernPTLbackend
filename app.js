@@ -82,7 +82,7 @@ db.connect((err) => {
 
 
 let users=[];
-db.query('SELECT * FROM users WHERE role = "teacher"', [], function(error, results, fields) {
+db.query("SELECT * FROM users WHERE role = 'teacher'", [], function(error, results, fields) {
   if (error) {
       console.error(error);
       return;
