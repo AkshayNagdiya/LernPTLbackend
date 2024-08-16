@@ -43,7 +43,6 @@ const io = new Server(server, {
   }
 });
 
-const { Client } = require("pg");
 
 const db = new Client({
   host: 'dpg-cqvglpdds78s739j4fn0-a',
